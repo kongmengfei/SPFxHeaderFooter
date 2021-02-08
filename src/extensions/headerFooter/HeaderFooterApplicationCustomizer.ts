@@ -30,7 +30,7 @@ export default class HeaderFooterApplicationCustomizer
 
   private _headerPlaceholder: PlaceholderContent | undefined;
   private _footerPlaceholder: PlaceholderContent | undefined;
-  
+
   @override
   public onInit(): Promise<void> {
     pnp.setup({
@@ -46,7 +46,7 @@ export default class HeaderFooterApplicationCustomizer
         console.log("CustomSiteFooterEnabled: " + r.AllProperties.CustomSiteFooterEnabled);
         console.log("CustomSiteFooterBgColor: " + r.AllProperties.CustomSiteFooterBgColor);
         console.log("CustomSiteFooterColor: " + r.AllProperties.CustomSiteFooterColor);
-        console.log("CustomSiteFooterText: " + r.AllProperties.CustomSiteFooterText);     
+        console.log("CustomSiteFooterText: " + r.AllProperties.CustomSiteFooterText);
 
         if (r.AllProperties.CustomSiteHeaderEnabled == "true") {
           this.properties.Header = "<div id='customHeader' class='ms-dialogHidden' style='background-color:" + r.AllProperties.CustomSiteHeaderBgColor + ";color:" + r.AllProperties.CustomSiteHeaderColor + ";padding:3px;text-align:center;font-family:Segoe UI'><b>" + r.AllProperties.CustomSiteHeaderText + "</b></div>";
